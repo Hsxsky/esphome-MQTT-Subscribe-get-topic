@@ -19,6 +19,7 @@ class MQTTSubscribeTextSensor : public text_sensor::TextSensor, public Component
   void dump_config() override;
   float get_setup_priority() const override;
   void set_qos(uint8_t qos);
+  std::string topic_get;
 
  protected:
   mqtt::MQTTClientComponent *parent_;
